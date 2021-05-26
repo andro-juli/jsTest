@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linked list</title>
+</head>
+<body>
+    
+
+<script>
+        // linked list
+        let list = {
+        value: 1,
+        next: {
+            value: 2,
+            next: {
+                value: 3,
+                next: {
+                    value: 4,
+                    next: null
+            }
+        }
+    }
+};
+
+// while loop to loop through the block of code
+function printList(list){
+    while(list) {
+        alert(list.value)
+        list = list.next
+    }
+}
+printList(list);
+
+
+// recursive solution
+function  printList(list) {
+    alert(list.value)
+
+    if (list.next){
+        printList(list.next)
+    }
+}
+printList(list)
+
+// reverse order recursive - reverse it we bring the if statement first before the alert to output the other list before the current one
+
+function reverseOrderList(list){
+    if (list.next){
+        reverseOrderList(list.next)
+    }
+    alert(list.value)
+}
+reverseOrderList(list)
+
+
+// reverse order loop - while loop to first loop through in direct order then now output in reverse order using the for loop
+function reverseOrderList(list) {
+    let array = []
+    let items = list
+
+    while (items) {
+        array.push(items.value)
+        items = items.next
+    }
+
+    for (let i = array.length -1; i >= 0; i--){
+        alert(array[i])
+    }
+}
+reverseOrderList(list)
+</script>
+
+</body>
+</html>
