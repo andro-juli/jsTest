@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // Check if the sum of two numbers is Less than 100 - very easy
+        function compareTwoNumbers(x, y){
+            let sum = x + y
+            if(sum <= 100){
+                return true;
+            }else{
+                return false
+            }
+        }
+        console.log(compareTwoNumbers(50, 35))
+        
+        // calculate the perimerterofrectangle - very easy
+        function perimeterOfRectangle(length, width){
+            let perimeter = 2 * (length + width)
+            return perimeter
+        }
+        console.log(perimeterOfRectangle(5, 8))
+        
+        // area of triangle - very easy
+        function areaOfTriangle(base, height){
+            let area = (1/2 * (base * height))
+            return area
+        }
+        console.log(areaOfTriangle(10, 10))
+
+        // title string - easy
+        function capitalLeter(word){
+            return word.charAt(0) === word.charAt(0).toUpperCase()
+        }
+        console.log(capitalLeter('i hate mondays'))
+        
+        // concatenation - easy
+        let grains = ['rice', 'maize', 'wheat', 'bailey']
+        let numbers = ['1', '2', '3', '4']
+        function sum(){
+            let result = grains.concat(numbers)
+            return result
+        }
+        console.log(sum())
+
+        // base 10 to 2 - medium
+            function numberBase(number, frombase, tobase) {
+                var result = ""
+                if (number !== undefined) {
+                    if (tobase >= 2 && tobase <= 36) {
+                        result = parseInt(number, frombase).toString(tobase)
+                    }
+                }
+                return result
+            }
+            console.log(numberBase(78, 10, 2))
+    </script>
+</body>
+</html>
